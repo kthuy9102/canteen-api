@@ -1,0 +1,13 @@
+case,name,category,price,expected
+thieu_ten,,com,30000,422
+gia_am,Phở bò,bun_pho,-5000,422
+gia_le,Phở bò,bun_pho,30500,422
+gia_qua_cao,Phở bò,bun_pho,250000,422
+sai_loai,Phở bò,lau,30000,422
+trung_ten,Cơm gà xối mỡ,com,35000,40
+{"name": "{{name}}", "category": "{{category}}", "price": {{price}}}
+const c = pm.iterationData.get("case");
+const expected = Number(pm.iterationData.get("expected"));
+pm.test(`[${c}] trả về ${expected}`, () => {
+    pm.response.to.have.status(expected);
+});

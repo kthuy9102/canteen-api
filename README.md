@@ -129,6 +129,7 @@ pip freeze > requirements.txt
 python -m uvicorn app.main:app --reload
 ```
 Swagger UI: http://127.0.0.1:8000/docs
+# Ảnh minh chứng:
 <img width="1469" height="932" alt="image" src="https://github.com/user-attachments/assets/85719b98-39e5-42df-b147-a6ce5f8999ff" />
 
 
